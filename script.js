@@ -551,7 +551,7 @@ button.addEventListener("click", () => {
   document.getElementById("titleInput").value = ""
   document.getElementById("urlInput").value = ""
 
-  createToast("success", `Element '${child.title}' ajouté`)
+  createToast("success", `Element '${untitre}' ajouté`)
   modal.style.display = "none"
 
 })
