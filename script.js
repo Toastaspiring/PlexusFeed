@@ -169,7 +169,7 @@ function generateCategoryHTML(items, OpenedCategory) {
           category[2].children.splice(elementIndex, 1);
         }
 
-        createToast("success", `Element '${child.title}' supprimer`)
+        createToast("success", `Element supprimer`)
         DisplayCategory(OpenCategory)
         displayItems(currentFeed, "")
       })
@@ -551,7 +551,7 @@ button.addEventListener("click", () => {
   document.getElementById("titleInput").value = ""
   document.getElementById("urlInput").value = ""
 
-  createToast("success", `Element '${untitre}' ajouté`)
+  createToast("success", `Element ajouté`)
   modal.style.display = "none"
 
 })
