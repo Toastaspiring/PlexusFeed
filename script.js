@@ -169,7 +169,7 @@ function generateCategoryHTML(items, OpenedCategory) {
           category[2].children.splice(elementIndex, 1);
         }
 
-        createToast("success", `Element '${category[2].children[elementIndex].title}' supprimer`)
+        createToast("success", `Element '${child.title}' supprimer`)
         DisplayCategory(OpenCategory)
         displayItems(currentFeed, "")
       })
