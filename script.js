@@ -164,9 +164,11 @@ function generateCategoryHTML(items, OpenedCategory) {
         localStorage.removeItem(child.title)
 
         const elementIndex = category[2].children.findIndex(chil => chil.title === child.title)
+        const elementIndex2 = category[0].children[0].url.findIndex(url => url == category[2].children[elementIndex].url)
 
         if (elementIndex !== -1) {
           category[2].children.splice(elementIndex, 1);
+          category[0].children[0].url.splice(elementIndex2, 1)
         }
 
         createToast("success", `Element supprimer`)
