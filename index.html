@@ -1,0 +1,132 @@
+<!-- 
+   RSS Reader/Agregator Plexus 
+   made by Marec Louis
+   Last Edited 26/05/23 2:16PM
+
+   The RSS Reader/Agregator will fetch the xml files from RSS flux emited on custom website and display their item as a feed for user to watch
+
+-->
+<!DOCTYPE html>
+<html>
+   <head>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="style.css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+         <style>
+            /* width */
+            ::-webkit-scrollbar {
+              width: 10px;
+            }
+            
+            /* Track */
+            ::-webkit-scrollbar-track {
+               box-shadow: inset 0 0 1px #848a8f;
+               border-radius: 10px;
+            }
+             
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+              background: #c0c0c0; 
+              border-radius: 10px;
+            }
+            
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+              background: #8c8f91; 
+            }
+
+            ::placeholder {
+               color: grey;
+               opacity: 0.5;
+               font-style: italic;
+             }
+         </style>
+         <title>Plexus Feed</title>
+         <link rel="icon" type="images/x-icon" href="src/GreyPlexusicon.png" />
+         <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   </head>
+   <body>
+      <!--====== Header Section Start ======-->
+      <nav class="navigation">
+
+            <!-- Logo -->
+         <div class="logo">
+            <a href="#home"><img src="src/logo-plexus-white.png" height="40" width="auto"></a>
+         </div>
+         
+         <!-- Navigation -->
+         <ul class="menu-list">
+            <li><a href="#editmode"><img src="src/gear.png" height="30" width="auto"></a></li>            
+         </ul>
+      </nav>
+      
+      <!-- ==== Intro Section Start ==== -->
+      <div class="intro-section" id="home">
+         <ul class="notifications"></ul>
+         <div class="left-container">
+
+            <div class="section-header">
+               <h3 class="section-title">Flux RSS<span class="mdi mdi-rss" style="color: orange; margin-left: 3px"></span></h3>
+               <span class="mdi mdi-hospital-box-outline" style="color:#3498db; opacity: 0;"></span>
+            </div>
+            
+            <div id="cont" class="category-container">
+               
+               <!-- WHERE THE CATEGORY APPEAR-->
+
+            </div>
+         </div>
+
+         <div  class="main-container">
+            <div class="search-bar">
+               <input id="searchinput" type="search" style="padding: 10px; border: 0; background-color: transparent; width: 100%;" placeholder="Start Typing...">
+               <span class="mdi mdi-magnify"></span>
+            </div>
+
+            <div class="items-container">
+               <div class="col" id="col1">
+
+                  
+
+               </div>
+               <div class="col" id="col2">
+                  
+
+
+               </div>
+            </div>
+         </div>
+
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h2>Ajouter un Flux RSS<span class="mdi mdi-rss" style="color: orange; margin-left: 3px"></span></h2>
+               <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+               <div class="inputbox">
+                  <input id="titleInput" type="text" style="padding: 10px; border: 0; background-color: transparent; width: 100%;" placeholder="Titre du Flux ...">
+               </div>
+               <div class="inputbox">
+                  <input id="urlInput" type="text" style="padding: 10px; border: 0; background-color: transparent; width: 100%;" placeholder="URL du Flux ...">
+               </div>
+            </div>
+            <div class="modal-footer">
+               <h3 id="mbtn" class="validbutton">Ajouter le Flux</h3>
+            </div>
+         </div>
+      </div>
+
+      <script src="script.js"></script>
+   </body>
+
+   <footer style="background-color: #EEEEEE;">
+
+   </footer>
+</html>
+
